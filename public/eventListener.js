@@ -13,8 +13,9 @@ $("#submit").on("click", function(evt) {
     alert("请输入数字");
     evt.preventDefault();
   }else {
-    $.post('/result', $('form').serialize(), function() {
-
-    })
+    $.post('/result', $('form').serialize(), function(sumScore) {
+      $(":input[id=score]").prop("value", sumScore);
+    });
+    $("#submit").prop("disabled",true);
   }
 });
