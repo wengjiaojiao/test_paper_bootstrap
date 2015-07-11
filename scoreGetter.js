@@ -23,7 +23,6 @@ function textScore(infor, questionBank) {
   var answers = questionBank.answer;
 
   _.forEach(infor,function(inf, i) {
-      console.log(inf);
     answers.forEach(function(answer, i) {
       if(inf == answer) {
         score += questionBank.score;
