@@ -17,5 +17,6 @@ $("#submit").on("click", function(evt) {
       $(":input[id=score]").prop("value", sumScore);
     });
     $("#submit").prop("disabled",true);
+    $("#score").prop("disabled",true);
   }
 });
